@@ -10,7 +10,7 @@ function solve(matrix){
                     matched++;
                 }
             }
-            if(i!==matrix.length-1 ){
+            if(i !==matrix.length-1 ){
                 if(matrix[i][z]==matrix[i+1][z]){
                     matched++;
             }
@@ -19,6 +19,7 @@ function solve(matrix){
         }
         
     }
+    return matched;
 }
     
 
