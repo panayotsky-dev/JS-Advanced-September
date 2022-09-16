@@ -10,10 +10,9 @@ for(let i = 0; i < matrix.length; i++){
     resultRight += matrix[i][secondIndex]
     secondIndex--;
 } 
-   
 
 console.log(`${resultLeft} ${resultRight}`);
-// console.log(`${resultLeft} ${resultRight}`);
+
 }
 solve([[20, 40],
     [10, 60]]
