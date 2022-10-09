@@ -5,10 +5,10 @@ function focused() {
         input.addEventListener('blur', onBlur);        
     });
 
-    function onFocus() {
+    function onFocus(event) {
         event.target.parentNode.className = 'focused';
     }
-    function onBlur() {
+    function onBlur(event) {
         event.target.parentNode.classList.remove('focused');
     }
 }
