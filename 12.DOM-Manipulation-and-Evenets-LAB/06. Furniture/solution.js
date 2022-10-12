@@ -25,7 +25,7 @@ function buy() {
     for(let el of table){
         if(el.querySelector('input[type="checkbox"]:checked')){
             let tableData = Array.from(el.querySelectorAll('td'));
-                tableData.que
+                
                 let info = {
                     name:tableData[1].children[0].textContent,
                     price: tableData[2].children[0].textContent,
