@@ -36,7 +36,7 @@ class Garden {
                 throw Error("The quantity cannot be zero or negative.");
             }
             currentPlant.ripe = true 
-            currentPlant.quantity = quantity
+            currentPlant.quantity += quantity
             let returnMSG = quantity === 1 ?
                 `${quantity} ${plantName} has successfully ripened.` : `${quantity} ${plantName}s have successfully ripened.`
                 
