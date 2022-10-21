@@ -1,5 +1,4 @@
-let bookSelection = require('./book')
- 
+let bookSelection = require('./book') 
 let {assert} = require('chai')
 
 describe("Test for bookSelection",  ()=> {
