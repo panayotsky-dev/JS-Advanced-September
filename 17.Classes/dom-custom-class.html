@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASdadas</title>
+    <style>
+        #root{
+            display:flex;
+            justify-content: space-around;
+
+        }
+        .card{
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+            transition: 0.3s;
+            max-width:300px;
+        }
+        .card:hover{
+            box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+        }
+        .container{
+            padding:2px 16px;
+        }
+    </style>
+</head>
+<body>
+    <script src = "employee-card.js"></script>
+    <script>
+        // let rootElement = document.getElementById('root');
+    let firstEmployee = new EmployeeCard('#root','Pesho','Ivanov','Engineer');
+    let secondEmployee = new EmployeeCard('#root','Gosho','Petkov','Junior Developer');
+
+
+    setTimeout(() => {
+        firstEmployee.firstName = 'Strahil'
+    firstEmployee.render();
+    },2000)
+   
+
+    // firstEmployee.render();
+    </script>
+    
+</body>
+</html>
