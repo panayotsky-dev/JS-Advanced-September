@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .fancy-text{
+            font-style:italic;
+            font-size: 32px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .highlited-text{
+            background-color: gray;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        let divElement = document.createElement('div');
+        divElement.textContent = 'Some text here';
+        divElement.classList.add('fancy-text')
+        let rootElement = document.getElementById('root')
+        rootElement.appendChild(divElement);
+
+        divElement.addEventListener('mouseover', (e) =>{
+            e.currentTarget.classList.add('highlited-text')
+            //Take all current classes
+            console.log(e.currentTarget.classList);
+        })
+        divElement.addEventListener('mouseout', (e) =>{
+            e.currentTarget.classList.remove('highlited-text')
+        })
+        console.log(divElement instanceof HTMLDivElement) // true
+
+        //Aditional DOM methods
+            //-cloneNode(deep) create a duplicate of the selected element
+                //- if deep is true ,a deep-copy is created
+                // const duplicate = divElement.cloneNode(true)
+            //- replaceWith() replaces selected element with another
+                // const span= document.createElement('span');
+                //divElement.replaceWith(span);
+            //- before() insert element before selected node
+            //- after() insert element after selected node
+
+
+        // HTML Attributes and Methods
+            //- getAttribute() - returns the value of attributes of specified HTML element
+            // <input type="text" name="username"/>
+            // <input type="password" name="password"/>
+
+            // const inputEle = document.getElementsByTagName('input')[0]
+            // inputEle.getAttribute('type'); // text
+            // inputEle.setAttribute('name'); // username
+    </script>
+    
+</body>
+</html>
+
+
